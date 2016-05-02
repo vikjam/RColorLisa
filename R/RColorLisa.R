@@ -19,6 +19,6 @@ color.lisa.pal <- function(n = 5, name) {
 	  						 stringsAsFactors = FALSE)
 
 	n <- n + 1
-	unname(unlist(color.pals[which(color.pals$painting == name), 2:n]))
+	unname(unlist(color.lisa[which(color.lisa$painting == name), 2:n]))
 
 }
