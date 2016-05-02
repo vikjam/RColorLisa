@@ -42,3 +42,14 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
        scale_color_manual(values = ernst.pal)
 ```
 ![iris-ernst](figures/iris-ernst.png)
+
+```R
+# A gradient
+library(ggplot2)
+library(RColorLisa)
+rothko.pal  <- color.lisa.pal(5, "Untitled (Orange, Yellow, Red) by Mark Rothko")
+ggplot(faithfuld, aes(waiting, eruptions)) +
+       geom_raster(aes(fill = density), interpolate = TRUE) +
+       scale_fill_gradientn(colours = rothko.pal)
+```
+![faithful-rothko](figures/faithful-rothko.png)
