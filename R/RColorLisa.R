@@ -1,7 +1,7 @@
 #' Color Palettes from the Masters
 #'
 #' This function allows you to easily load color palettes from great painters into R.
-#' @param n Number of colors to return.
+#' @param n Number of colors to return. Defaults to 5.
 #' @param name Name of painting
 #' @keywords colors
 #' @export

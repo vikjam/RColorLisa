@@ -1,5 +1,5 @@
+# Hacky script to extract the colors
 require 'nokogiri'
-require 'pp'
 
 color_lisa_html = File.open("color-lisa.html") { | f | Nokogiri::HTML(f) }
 
