@@ -24,8 +24,7 @@ library(ggplot2)
 library(RColorLisa)
 df <- data.frame(x = rep(c(2, 5, 7, 9, 12), 2),
                  y = rep(c(1, 2), each = 5),
-                 z = factor(rep(1:5, each = 2))
-)
+                 z = factor(rep(1:5, each = 2)))
 escher.pal <- color.lisa.pal(5, "Gravity by M.C. Escher")
 ggplot(df, aes(x, y)) + geom_tile(aes(fill = z)) +
                         scale_fill_manual(values = escher.pal)
@@ -47,7 +46,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
 # A gradient
 library(ggplot2)
 library(RColorLisa)
-rothko.pal  <- color.lisa.pal(5, "Untitled (Orange, Yellow, Red) by Mark Rothko")
+rothko.pal <- color.lisa.pal(5, "Untitled (Orange, Yellow, Red) by Mark Rothko")
 ggplot(faithfuld, aes(waiting, eruptions)) +
        geom_raster(aes(fill = density), interpolate = TRUE) +
        scale_fill_gradientn(colours = rothko.pal)
