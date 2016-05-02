@@ -11,6 +11,7 @@ devtools::install_github("vikjam/RColorLisa")
 ### Examples
 ```R
 # Create a sequential palette for usage and show colors
+library(RColorLisa)
 pretty.palette <- color.lisa.pal(5, "The Dream by Pablo Picasso")
 image(1:5, 1, as.matrix(1:5), col = pretty.palette, xlab = "The Dream by Pablo Picasso",
       ylab = "", xaxt = "n", yaxt = "n", bty = "n")
@@ -20,6 +21,7 @@ image(1:5, 1, as.matrix(1:5), col = pretty.palette, xlab = "The Dream by Pablo P
 ```R
 # ggplot2 example
 library(ggplot2)
+library(RColorLisa)
 df <- data.frame(x = rep(c(2, 5, 7, 9, 12), 2),
                  y = rep(c(1, 2), each = 5),
                  z = factor(rep(1:5, each = 2))
@@ -33,6 +35,7 @@ ggplot(df, aes(x, y)) + geom_tile(aes(fill = z)) +
 ```R
 # Slightly more practical ggplot2 example
 library(ggplot2)
+library(RColorLisa)
 ernst.pal <- color.lisa.pal(5, "Woman, Old Man, and Flower by Max Ernst")
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + 
        geom_point(size = 3) + 
