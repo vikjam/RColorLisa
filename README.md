@@ -36,7 +36,7 @@ ggplot(df, aes(x, y)) + geom_tile(aes(fill = z)) +
 # Slightly more practical ggplot2 example
 library(ggplot2)
 library(RColorLisa)
-ernst.pal <- color.lisa.pal(5, "Woman, Old Man, and Flower by Max Ernst")
+ernst.pal <- color.lisa.pal(3, "Woman, Old Man, and Flower by Max Ernst")
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + 
        geom_point(size = 3) + 
        scale_color_manual(values = ernst.pal)
